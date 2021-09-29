@@ -201,6 +201,17 @@ t.test('default message', t => {
   t.end()
 })
 
+t.test('args are cleaned', t => {
+  t.matchSnapshot(errorMessage(Object.assign(new Error('cmd err'), {
+    cmd: 'some command',
+    signal: 'SIGYOLO',
+    args: ['a', 'r', 'g', 's', 'https://evil:password@npmjs.org'],
+    stdout: 'stdout',
+    stderr: 'stderr',
+  }), npm))
+  t.end()
+})
+
 t.test('eacces/eperm', t => {
   const runTest = (windows, loaded, cachePath, cacheDest) => t => {
     if (windows)
@@ -292,7 +303,7 @@ t.test('json parse', t => {
     process.argv = ['arg', 'v']
     t.matchSnapshot(errorMessage(Object.assign(new Error('conflicted'), {
       code: 'EJSONPARSE',
-      file: resolve(dir, 'package.json'),
+      path: resolve(dir, 'package.json'),
     }), npm))
     t.end()
   })
@@ -314,7 +325,7 @@ t.test('json parse', t => {
     process.argv = ['arg', 'v']
     t.matchSnapshot(errorMessage(Object.assign(new Error('not json'), {
       code: 'EJSONPARSE',
-      file: resolve(dir, 'package.json'),
+      path: resolve(dir, 'package.json'),
     }), npm))
     t.end()
   })
@@ -330,7 +341,7 @@ t.test('json parse', t => {
     process.argv = ['arg', 'v']
     t.matchSnapshot(errorMessage(Object.assign(new Error('not json'), {
       code: 'EJSONPARSE',
-      file: `${dir}/blerg.json`,
+      path: `${dir}/blerg.json`,
     }), npm))
     t.end()
   })
@@ -418,6 +429,14 @@ t.test('404', t => {
   t.test('name with error', t => {
     const er = Object.assign(new Error('404 not found'), {
       pkgid: 'node_modules',
+      code: 'E404',
+    })
+    t.matchSnapshot(errorMessage(er, npm))
+    t.end()
+  })
+  t.test('cleans sensitive info from package id', t => {
+    const er = Object.assign(new Error('404 not found'), {
+      pkgid: 'http://evil:password@npmjs.org/not-found',
       code: 'E404',
     })
     t.matchSnapshot(errorMessage(er, npm))

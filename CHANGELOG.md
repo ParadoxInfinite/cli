@@ -1,3 +1,229 @@
+## v7.24.1 (2021-09-23)
+
+### DEPENDENCIES
+
+* [`1be8d41e6`](https://github.com/npm/cli/commit/1be8d41e6f23f7a3d8411a31099ab546fbcb5bfa)
+  `socks-proxy-agent@6.1.0`:
+  * feat: allow passing tls connection options
+* [`eafd55eae`](https://github.com/npm/cli/commit/eafd55eae219a6c15d2857d06b673a67d7f7d060)
+  `glob@7.2.0`
+
+### DOCS
+
+* [`dae5ce305`](https://github.com/npm/cli/commit/dae5ce3055ded57eab8aa3425004c60224a6fe67)
+  [#3784](https://github.com/npm/cli/issues/3784)
+  docs: document special meaning of registry.npmjs.com
+  ([@everett1992](https://github.com/everett1992))
+
+## v7.24.0 (2021-09-16)
+
+### FEATURES
+
+* [`c7787b3fb`](https://github.com/npm/cli/commit/c7787b3fb7630aab84aae83ebf9a7117c7173b6b)
+  [`1fbbe1e04`](https://github.com/npm/cli/commit/1fbbe1e04be5d79c7b49910324e64c19ed599eeb)
+  bundled npm-install-checks ([@wraithgar](https://github.com/wraithgar))
+
+### BUG FIXES
+
+* [`0320bd77e`](https://github.com/npm/cli/commit/0320bd77e2a38f48a88e377df4b122fd21043a83)
+  [#3739](https://github.com/npm/cli/issues/3739)
+  fix(view): Show the correct publish date for versions selected by range ([@andersk](https://github.com/andersk))
+* [`e4a521857`](https://github.com/npm/cli/commit/e4a5218573583149af795982a39fa64a4116cdab)
+  [#3748](https://github.com/npm/cli/issues/3748)
+  fix(install.sh): don't remove old npm first
+  ([@wraithgar](https://github.com/wraithgar))
+* [`b4aac345b`](https://github.com/npm/cli/commit/b4aac345b0a7cdec4d713c5be4daea37330b2b26)
+  [#3754](https://github.com/npm/cli/issues/3754)
+  fix(config): user-agent properly shows ci
+  ([@wraithgar](https://github.com/wraithgar))
+* [`b807cd62e`](https://github.com/npm/cli/commit/b807cd62eabe337e3243415c9870ea36d9289e12)
+  [#3738](https://github.com/npm/cli/issues/3738)
+  fix(search): return valid json for no results
+  ([@AyushRawal](https://github.com/AyushRawal))
+* [`2def17a3b`](https://github.com/npm/cli/commit/2def17a3b625b92b40c6185ff4b47e8ed006492c)
+  [#3760](https://github.com/npm/cli/issues/3760)
+  fix(install): use configured registry when checking manifest
+  ([@yacoman89](https://github.com/yacoman89))
+* [`ca792acdd`](https://github.com/npm/cli/commit/ca792acdd4ba683d8415c88188ec6739033fb4fd)
+  [#3761](https://github.com/npm/cli/issues/3761)
+  fix(logs): clean args for failed commands
+  ([@wraithgar](https://github.com/wraithgar))
+
+### DEPENDENCIES
+
+* [`59743972c`](https://github.com/npm/cli/commit/59743972c2ae1d2dd601aaa6c59974c686b1cb29)
+  [#3747](https://github.com/npm/cli/issues/3747)
+  fix(did-you-mean): succeed if cwd is not a package
+  ([@wraithgar](https://github.com/wraithgar))
+* [`ac8e4ad18`](https://github.com/npm/cli/commit/ac8e4ad18a6b726dd2c3abcb0f605701cca0ae2c)
+  `init-package-json@2.0.5`:
+  * fix: bin script path
+* [`371655a6b`](https://github.com/npm/cli/commit/371655a6b0e6664fec67f16cb247cc9f174a5197)
+  `minipass@3.1.5`:
+  * fix: re-emit 'error' event if missed and new listener added
+  * fix: do not blow up if process is missing
+
+### DOCUMENTATION
+
+* [`4d93b484a`](https://github.com/npm/cli/commit/4d93b484abb50e3704fb436db572b93fb36c7ac3)
+  [#3759](https://github.com/npm/cli/issues/3759)
+  fix(docs): use correct hyperlink to package-json
+  ([@nategreen](https://github.com/nategreen))
+
+## v7.23.0 (2021-09-09)
+
+### FEATURES
+
+* [`6c12500ae`](https://github.com/npm/cli/commit/6c12500ae14a6f8b78e3ab091ee6cc8e2ea9fd23)
+  [#3731](https://github.com/npm/cli/issues/3731)
+  feat(install): very strict global npm engines
+  ([@wraithgar](https://github.com/wraithgar))
+
+### BUG FIXES
+
+* [`1ad093824`](https://github.com/npm/cli/commit/1ad0938243110d983284e8763da41a57b561563d)
+  [#3732](https://github.com/npm/cli/issues/3732)
+  fix(error-message): clean urls from 404 error
+  ([@wraithgar](https://github.com/wraithgar))
+
+### DOCUMENTATION
+
+* [`64f7d1a55`](https://github.com/npm/cli/commit/64f7d1a55db99b1aaf8fb59557b3dedcdcd954a0)
+  [#3727](https://github.com/npm/cli/issues/3727)
+  docs(contributing): add note on changes to tooling
+  ([@darcyclarke](https://github.com/darcyclarke))
+* [`eda9162f2`](https://github.com/npm/cli/commit/eda9162f2db19b512d3af6b0d43201d54045c13a)
+  [#3715](https://github.com/npm/cli/issues/3715)
+  Add --if-present flag documentation to workspaces
+  ([@Matsuuu](https://github.com/Matsuuu))
+
+## v7.22.0 (2021-09-02)
+
+### BUG FIXES
+* [`6f431fe23`](https://github.com/npm/cli/commit/6f431fe2325f77b4370f95848359a36fe7a011d1)
+  [#3690](https://github.com/npm/cli/issues/3690)
+  Fix one “see also” link
+  ([@tripu](https://github.com/tripu))
+
+### DEPENDENCIES
+* [`033e948c9`](https://github.com/npm/cli/commit/033e948c95b3455812e03a860ad1bd96a635e7eb)
+  `read-package-json@4.1.1`:
+  * feat: add types lookup
+  * fix(man): don't lose relative man path
+* [`1fa549db0`](https://github.com/npm/cli/commit/1fa549db0955b55fd680a658809a6d97be306b06)
+  `@npmcli/config@2.3.0`:
+  * feat: export npm_config_local_prefix and npm_config_global_prefix to the environment
+* [`e91578d10`](https://github.com/npm/cli/commit/e91578d10b1d5d930fec32e7070d975af4892140)
+  `minpass-fetch@1.4.1`:
+  * Made rejectUnauthorized depend on NODE_TLS_REJECT_UNAUTHORIZED
+* [`6125db545`](https://github.com/npm/cli/commit/6125db545315da0217fe7b05062fd0a504c9a45b)
+  `are-we-there-yet@1.1.6`
+* [`0dcda73b0`](https://github.com/npm/cli/commit/0dcda73b022083338c4cb755390a275757b9627b)
+  `string_decoder@1.3.0`
+* [`4b913417c`](https://github.com/npm/cli/commit/4b913417c4e30980505a02eec50810f895dd52d7)
+  `npmlog@5.0.1`
+* [`876c755eb`](https://github.com/npm/cli/commit/876c755eb0dfc215123682f798b5fca415f7c7d9)
+  `@npmcli/arborist@2.8.3`:
+  * fix: do not fail adding unresolvable optional dep
+
+## v7.21.1 (2021-08-26)
+
+### BUG FIXES
+
+* [`4e52217cb`](https://github.com/npm/cli/commit/4e52217cb25a697b0f6b0131bcb8c87e0dbcda53)
+  [#3684](https://github.com/npm/cli/issues/3684)
+  fix(config): respect --global, --package-lock-only
+  ([@nlf](https://github.com/nlf))
+
+### DEPENDENCIES
+
+* [`e3878536f`](https://github.com/npm/cli/commit/e3878536f3612d9ddc3002c126cfa9a91021c7db)
+  `make-fetch-happen@9.1.0`:
+  * fix: use the same strictSSL default as tls.connect
+* [`145f70cc1`](https://github.com/npm/cli/commit/145f70cc1b78dee4ffa53f557fa72d0948696839)
+  `read-package-json@4.0.1`:
+  * fix: Add gitHead in subdirectories too
+  * fix(man): don't resolve paths to man files
+* [`3f4d37143`](https://github.com/npm/cli/commit/3f4d371432a1fc8280e73d8467acd0eed0bbef26)
+  `tar@6.1.11`:
+  * fix: perf regression on hot string munging path
+* [`e63a942c6`](https://github.com/npm/cli/commit/e63a942c685233fa546788981ed9c144220d50e1)
+  `cacache@15.3.0`:
+  * feat: introduce @npmcli/fs for tmp dir methods
+
+### DOCUMENTATION
+
+* [`957fa6040`](https://github.com/npm/cli/commit/957fa604035992285572f63c38545eea86bbb1ff)
+  [#3681](https://github.com/npm/cli/issues/3681)
+  clarify uninstall lifecycle script
+  ([@fritzy](https://github.com/fritzy))
+
+## v7.21.0 (2021-08-19)
+
+### FEATURES
+
+* [`ff34d6cd6`](https://github.com/npm/cli/commit/ff34d6cd6f2077962cba1ef9c893a958ac7174f8)
+  [#3592](https://github.com/npm/cli/issues/3592)
+  feat(cache): initial implementation of ls and rm
+  ([@fritzy](https://github.com/fritzy))
+
+### BUG FIXES
+
+* [`32e88c943`](https://github.com/npm/cli/commit/32e88c94387bda6b25f66019793efcda8f01ef6e)
+  [#3640](https://github.com/npm/cli/issues/3640)
+  fix(did-you-mean): switch levenshtein libraries
+  ([@wraithgar](https://github.com/wraithgar))
+* [`487731cd5`](https://github.com/npm/cli/commit/487731cd56a22272c6ff72ef2fa7822368bf63e3)
+  [#3658](https://github.com/npm/cli/issues/3658)
+  fix(logging): sanitize logged argv
+  ([@wraithgar](https://github.com/wraithgar))
+* [`68a19bb02`](https://github.com/npm/cli/commit/68a19bb02aa0d7a566c8e2245f1e524b915faf09)
+  [#3661](https://github.com/npm/cli/issues/3661)
+  fix(error-message): look for er.path not er.file
+  ([@wraithgar](https://github.com/wraithgar))
+
+### DEPENDENCIES
+
+* [`df57f0d53`](https://github.com/npm/cli/commit/df57f0d532d406b3b1409454ea5f2255fcd08248)
+  `@npmcli/run-script@1.8.6`
+* [`8183976cf`](https://github.com/npm/cli/commit/8183976cfa53bab6e9116ec5de97b04225c5d09b)
+  `normalize-package-data@3.0.3`:
+  * fix: account for "licence" as spelling variant
+* [`f07772401`](https://github.com/npm/cli/commit/f07772401c3712d5f9b0dfeef88e1943229cfa79)
+  `init-package-json@2.0.4`
+* [`991a3bd39`](https://github.com/npm/cli/commit/991a3bd39f0abf8614373f267419c7b8f6e279ac)
+  `read-package-json@4.0.0`
+* [`e9e5ee560`](https://github.com/npm/cli/commit/e9e5ee560e2baf694843df852d027fb9f2dbcb06)
+  `@npmcli/arborist@2.8.2`:
+  * fix: treat top-level global packages as "top" nodes
+  * fix: load global symlinks implicitly as file: deps
+  * fix(reify): debug crash when extracting into symlink
+  * fix: node_modules must be a directory
+  * fix: make Node.children() a case-insensitive Map
+  * fix(reify): verify existing deps in nm are dirs
+* [`b6f40b5f8`](https://github.com/npm/cli/commit/b6f40b5f85094387f2fa8d42b6a624644b8ddcf1)
+  `tar@6.1.10`:
+  * fix: prune dirCache properly for unicode, windows
+  * fix: reserve paths properly for unicode, windows
+  * fix: prevent path escape using drive-relative paths
+  * fix: drop dirCache for symlink on all platforms
+* [`218cacadc`](https://github.com/npm/cli/commit/218cacadcf35879ce178813c699258e7ffe91fe9)
+  `is-core-module@2.6.0`
+* [`7ac621cd1`](https://github.com/npm/cli/commit/7ac621cd14f2ffbf5c15c3258f537fdfddc21ac6)
+  `smart-buffer@4.2.0`
+* [`94f92de13`](https://github.com/npm/cli/commit/94f92de138432c900b195b71949f4933e872f26a)
+  `make-fetch-happen@9.0.5`
+* [`71cdfd898`](https://github.com/npm/cli/commit/71cdfd8983cd0c61f39bdf91f87d40aad3b081c2)
+  `spdx-license-ids@3.0.10`:
+  * update license list to v3.14
+
+### DOCUMENTATION
+
+* [`ff6626ab6`](https://github.com/npm/cli/commit/ff6626ab6ca9b4e189a3bc56a762104927dbeedb)
+  [#3630](https://github.com/npm/cli/issues/3630)
+  fix(docs): update npm-publish access flag info
+  ([@austincho](https://github.com/austincho))
+
 ## v7.20.6 (2021-08-12)
 
 ### DEPENDENCIES
